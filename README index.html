@@ -3,217 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiple Work | Ultimate Pro</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+<title>Multiple Work | All Services</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
-}
-
-/* Animations */
-@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-@keyframes glow{0%{box-shadow:0 0 10px #00f2fe}50%{box-shadow:0 0 30px #4facfe}100%{box-shadow:0 0 10px #00f2fe}}
-
-header{
-  text-align:center;
-  padding:60px 20px;
-  animation:fadeUp 1s ease;
-}
-.logo{
-  width:90px;height:90px;margin:0 auto 15px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#00f2fe,#4facfe);
-  display:flex;align-items:center;justify-content:center;
-  font-size:34px;font-weight:800;color:#000;
-  animation:glow 3s infinite;
-}
-header h1{font-size:40px;font-weight:800;}
-header p{opacity:.9;margin-top:8px;}
-
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:12px 28px;
-  border-radius:40px;
-  background:linear-gradient(135deg,#f7971e,#ffd200);
-  color:#000;
-  font-weight:700;
-  text-decoration:none;
-}
-
-section{
-  padding:45px 20px;
-  animation:fadeUp 1s ease;
-}
-
-.services,.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:18px;
-}
-
-.card{
-  background:rgba(255,255,255,.12);
-  backdrop-filter:blur(10px);
-  border-radius:22px;
-  padding:22px;
-  text-align:center;
-  transition:.4s;
-}
-.card:hover{
-  transform:translateY(-10px);
-  background:rgba(255,255,255,.25);
-}
-
-.box{
-  background:rgba(255,255,255,.08);
-  border-radius:24px;
-  padding:28px;
-}
-
-.payment{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:15px;
-}
-.paybtn{
-  background:#fff;color:#000;
-  padding:15px;border-radius:16px;
-  font-weight:700;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  opacity:.9;
-}
-
-/* Popup */
-.popup{
-  display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,.85);z-index:99;
-}
-.popup-box{
-  background:#fff;color:#000;
-  max-width:380px;margin:90px auto;
-  padding:22px;border-radius:22px;
-}
-.popup-box input,.popup-box textarea{
-  width:100%;padding:10px;margin:7px 0;
-}
-.popup-box button{
-  width:100%;padding:12px;border:none;
-  border-radius:30px;
-  background:linear-gradient(135deg,#00f2fe,#4facfe);
-  font-weight:700;
-}
-.close{float:right;font-size:22px;cursor:pointer}
-
-/* Admin */
-.admin{display:none;background:#111;padding:20px;border-radius:20px;}
-.admin div{background:#222;padding:10px;margin:6px 0;border-radius:10px;}
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 40px;
+        font-size: 3em;
+        text-shadow: 2px 2px 10px #000;
+    }
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 20px;
+    }
+    .btn {
+        padding: 20px 30px;
+        border-radius: 12px;
+        background-color: #fff;
+        color: #2575fc;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 4px 4px 20px rgba(0,0,0,0.3);
+    }
+    form {
+        margin: 40px auto;
+        max-width: 400px;
+        background: rgba(255,255,255,0.1);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+    input, textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    input[type="submit"] {
+        background-color: #2575fc;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #6a11cb;
+    }
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">MW</div>
-  <h1>Multiple Work</h1>
-  <p>One Platform • Multiple Professional Solutions</p>
-  <a class="btn" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX">💬 WhatsApp</a>
-</header>
+<h1>Multiple Work</h1>
+<p>All Home & Professional Services</p>
 
-<!-- SERVICES -->
-<section>
-  <h2>Our Core Services</h2><br>
-  <div class="services">
-    <div class="card" onclick="openForm('Deep Cleaning')">🧼 Deep Cleaning</div>
-    <div class="card" onclick="openForm('Hire Driver')">🚗 Hire Driver</div>
-    <div class="card" onclick="openForm('Real Estate')">🏠 Real Estate</div>
-    <div class="card" onclick="openForm('Chef Service')">👨‍🍳 Personal Chef</div>
-    <div class="card" onclick="openForm('Housekeeping')">🧹 Housekeeping</div>
-    <div class="card" onclick="openForm('Verified Manpower')">🛡️ Verified Manpower</div>
-  </div>
-</section>
-
-<!-- PAYMENT -->
-<section>
-  <div class="box">
-    <h2>Easy Online Payments</h2>
-    <p>Accept payments via UPI apps</p><br>
-    <div class="payment">
-      <div class="paybtn">Paytm</div>
-      <div class="paybtn">PhonePe</div>
-      <div class="paybtn">Google Pay</div>
-    </div>
-  </div>
-</section>
-
-<!-- LAST 4 POINTS – FULL SECTIONS -->
-<section>
-  <h2>Business Growth Services</h2><br>
-  <div class="features">
-    <div class="card">🌐 <b>Domain & Hosting</b><br>We set up fast, secure hosting with custom domain for your brand.</div>
-    <div class="card">📱 <b>Android App (APK)</b><br>Your business converted into a mobile app for more trust.</div>
-    <div class="card">📈 <b>Google Ads & Marketing</b><br>High-conversion landing pages & paid ads support.</div>
-    <div class="card">🕒 <b>24x7 Support</b><br>Dedicated support & admin system for smooth operations.</div>
-  </div>
-</section>
-
-<section>
-  <a class="btn" onclick="openAdmin()">🔐 Admin Panel</a>
-</section>
-
-<section class="admin" id="admin">
-  <h3>Customer Requests</h3>
-  <div id="data"></div>
-</section>
-
-<footer>
-  📧 yourmail@gmail.com <br>
-  📞 +91 XXXXXXXXXX <br>
-  © 2025 Multiple Work
-</footer>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-  <div class="popup-box">
-    <span class="close" onclick="closeForm()">×</span>
-    <input id="n" placeholder="Your Name">
-    <input id="p" placeholder="Mobile Number">
-    <textarea id="s"></textarea>
-    <button onclick="submitData()">Submit</button>
-  </div>
+<div class="services">
+    <a class="btn" href="#">Deep Cleaning</a>
+    <a class="btn" href="#">Hire Driver</a>
+    <a class="btn" href="#">Real Estate</a>
+    <a class="btn" href="#">Chef Service</a>
+    <a class="btn" href="#">Housekeeping</a>
+    <a class="btn" href="#">More Services</a>
 </div>
 
-<script>
-function openForm(service){
-  popup.style.display="block";
-  s.value=service;
-}
-function closeForm(){popup.style.display="none";}
+<!-- CONTACT FORM -->
+<form action="https://formsubmit.co/rajputanubhav919@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <input type="submit" value="Send Message">
+</form>
 
-function submitData(){
-  let arr=JSON.parse(localStorage.getItem("mw")||"[]");
-  arr.push({n:n.value,p:p.value,s:s.value});
-  localStorage.setItem("mw",JSON.stringify(arr));
-  window.open("https://wa.me/91XXXXXXXXXX?text=Service:"+s.value);
-  closeForm();
-}
+<!-- PAYMENT BUTTON -->
+<a class="btn" href="upi://pay?pa=9336205719@ptsbi&pn=MultipleWork">Pay Now</a>
 
-function openAdmin(){
-  admin.style.display="block";
-  let d=JSON.parse(localStorage.getItem("mw")||"[]");
-  data.innerHTML=d.map(x=>`<div>${x.n} | ${x.p}<br>${x.s}</div>`).join("");
-}
-</script>
+<!-- WHATSAPP BUTTON -->
+<a class="btn" href="https://wa.me/919339205719">Chat on WhatsApp</a>
+
+<p style="margin-top:50px;">📧 rajputanubhav919@gmail.com | 📞 9339205719</p>
 
 </body>
-</html>
+  </html>
